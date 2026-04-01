@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Cadastro</h1>
+    <p>Digite o nome do museu:</p>
+    <input type="text" id="ipt_nome">
+    <p>Digite seu email:</p>
+    <input type="text" id="ipt_email">
+    <p>Digite sua senha:</p>
+    <input type="password" id="ipt_senha">
+    <p>Digite seu cnpj</p>
+    <input type="text" id="ipt_cnpj" maxlength="14">
+    <p>Ativo:</p>
+    <select id="ipt_ativo">
+        <option value="1">Sim</option>
+        <option value="0">Não</option>
+    </select>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <div id="div_mensagem"></div>
+</body>
+
+</html>
+<script>
+
+    function cadastrar() {
+        let nome = ipt_nome.value;
+        let email = ipt_email.value;
+        let senha = ipt_senha.value;
+        let cnpj = ipt_cnpj.value;
+        let status = ipt_ativo.value;
+        let texto = '';
+
+        let posArroba = email.indexOf('@');
+        let posCom = email.indexOf('.com');
+
+        if (nome == '' || email == '' || senha == '' || cnpj == '') {
+            texto = 'Preencha todos os campos corretamente';
+        }else if (!(posArroba != -1 && posCom != -1 && posArroba < posCom)) {
+            texto = 'Email inválido';
+        }else if (cnpj.length != 14) {
+            texto = 'CNPJ deve ter 14 caracteres';
+        }else if (senha.length < 6) {
+            texto = 'Senha deve ter pelo menos 6 caracteres';
+        }else {
+            texto = 'Cadastro realizado com sucesso';
+        }
+
+        div_mensagem.innerHTML = texto;
+    }
+</script>
