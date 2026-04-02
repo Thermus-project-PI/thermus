@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+
+body{
+    background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('img/fundo.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+.card-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 4px white;
+    border-radius: 50px;
+    margin-top: 40px;
+    width: 500px;
+    padding: 20px;
+    gap: 8px;
+    background-color: rgba(212, 204, 204, 0.403);
+}
+
+.card-login img{
+    margin-top: 20px;;
+    width: 120px;
+}
+
+.titulo{
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    color: #0F2A2E;
+    letter-spacing: 6px;
+    font-weight: 900;
+    margin-bottom: 5px; 
+}
+
+.campo p {
+  margin: 5px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.campo input{
+    margin-bottom: 10px;
+}
+  
