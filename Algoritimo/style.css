@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
 
 body{
-    background: 
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('img/fundo.jpg');
+    background-image: url('img/fundo.png');
     background-size: cover; 
     background-position: center;
 }
@@ -15,32 +15,51 @@ body{
     border: solid 4px white;
     border-radius: 50px;
     margin-top: 40px;
-    width: 500px;
-    padding: 20px;
-    gap: 8px;
-    background-color: rgba(212, 204, 204, 0.403);
+    width: 320px;
+    padding: 50px;
+    background-color: rgba(165, 155, 155, 0.548);
 }
 
 .card-login img{
-    margin-top: 20px;;
+    margin-top: 8px;
     width: 120px;
+    filter: drop-shadow(1px 1px 7px #bca6a680);
 }
 
 .titulo{
-    font-family: 'Cinzel', serif;
-    font-size: 48px;
-    color: #0F2A2E;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: #21516C;
     letter-spacing: 6px;
     font-weight: 900;
     margin-bottom: 5px; 
+    text-shadow: 1px 1px 7px #bca6a680;
 }
 
-.campo p {
-  margin: 5px 0;
-  font-family: 'Montserrat', sans-serif;
+.campo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 10px;
 }
-
 .campo input{
-    margin-bottom: 10px;
+    background-color: #D9D9D9;
+    color: #7D7D7D;
+    border: none;
+    border-radius: 50px;
+    width: 280px;
+    padding: 18px;
+    gap: 15px;
+}
+
+.botao{
+    border: none;
+    background-color: #21516C;
+    color: white;
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
 }
   
