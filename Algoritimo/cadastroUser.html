@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-cadastro">
+        <a href="/index"><img src="img/seta.png" class="seta"></a>
+        <img src="img/logo.png" class="logo" alt="logo thermus">
+        <h1 class="titulo">CADASTRO</h1>
+            <div class="campo">
+                <input type="text" id="InNome" placeholder="Nome Completo">
+                <input type="text" id="InEmail" placeholder="Email">
+                <input type="text" id="InInstituicao" placeholder="Instituição">
+                <input type="text" id="InCargo" placeholder="Cargo">    
+                <button onclick="cadastrar()" class="botao">Entrar</button>
+                <p class="mensagem">Já possui conta? <a href="/login.html">Clique Aqui</a></p>
+                <div id="div_mensagem" class="aviso"></div> 
+            </div>
+</body>
+</html>
+<script>
+ function cadastrar() {
+        let nome = ipt_nome.value;
+        let email = ipt_email.value;
+        let senha = ipt_senha.value;
+        let cnpj = ipt_cnpj.value;
+        let status = ipt_ativo.value;
+        let texto = '';
+
+        let posArroba = email.indexOf('@');
+        let posCom = email.indexOf('.com');
+
+        if (nome == '' || email == '' || senha == '' || cnpj == '') {
+            texto = 'Preencha todos os campos corretamente';
+        }else if (!(posArroba != -1 && posCom != -1 && posArroba < posCom)) {
+            texto = 'Email inválido';
+        }else if (cnpj.length != 14) {
+            texto = 'CNPJ deve ter 14 caracteres';
+        }else if (senha.length < 6) {
+            texto = 'Senha deve ter pelo menos 6 caracteres';
+        }else {
+            texto = 'Cadastro realizado com sucesso';
+        }
+
+        div_mensagem.innerHTML = texto;
+    }
+</script>
