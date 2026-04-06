@@ -1,0 +1,350 @@
+header{
+    padding: 0;
+    margin: 0; 
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+footer{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    justify-content: center;
+    color: #214B63;
+    width: 100%;
+}
+
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    background-color: #21516C;
+    width: 100%;
+    height: 10vh;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 20%;
+    height: 110%;
+    gap: 10px;
+}
+
+.logo img{
+    width: 50%;
+    height: 60%;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+.links a:hover{
+    color: rgb(175, 175, 175);
+}
+
+.login{
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+.login:hover{
+    background-color: rgb(175, 175, 175);
+    color: #1a3f55;
+}
+
+/* Banner */
+
+.banner{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../img/banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner-shadow{
+    height: 100%;
+    width: 80%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.89) 50%, transparent);
+}
+
+.banner-content{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 20%;
+    height: 3vh;
+    background-color: #214B63;
+    font-weight: bold;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+.banner .titulo{
+    display: flex;
+    color: white;
+    font-size: 7rem;
+    width: 60%;
+}
+
+.banner p{
+    margin-top: 10px;
+}
+
+.titulo spam{
+    color: #214B63;
+}
+
+/*Quem somos?*/
+
+.quemsomos{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 5%;
+    gap: 7vh;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 5vh;
+    justify-content: space-between;
+    margin: 0 10% 0 10%;
+}
+
+.content img{
+    width: 40%;
+}
+
+.texto{
+    font-size: 3rem;
+    width: 50%;
+}
+
+.texto spam{
+    color: #214B63;
+    font-weight: bold;
+}
+
+#subtexto{
+    align-self: center;
+    font-size: 3rem;
+    width: 80%;
+    height: fit-content;
+    margin-top: 4%;
+    font-weight: bold;
+    text-align: center;
+}
+
+#subtexto spam{
+    color: #214B63;
+}
+
+/*  Qual a Importancia */
+
+.cards{
+    display: flex;
+    margin: 0 10% 0 10%;
+    justify-content: space-around;
+    gap: 5%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    width: 30%;
+    gap: 3vh;
+    height: 50vh;
+    border: solid #214B63 3px;
+    border-radius: 35px;
+}
+
+.card .titulo{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.card p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #214B63;
+    height: 10vh;
+    width: 20%;
+    border-radius: 100%;
+}
+
+/* Área do Cliente*/
+
+.areacliente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 5vh;
+    border: solid #214B63 5px;
+    border-radius: 25px;
+}
+
+.areacliente p{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.areacliente img{
+    width: 25%;
+    margin: 5vh;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculadora */
+
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora .texto{
+    text-align: center;
+    width: 80%;
+    font-size: 2rem;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    height:fit-content;
+    width: 100%;
+    background-color: #214B63;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 1%;
+}
+
+.info p{
+    color: white;
+    text-align: left;
+    font-size: 1rem;
+    width: 50%;
+}
+
+.footer .titulo{
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 1vh;
+    width: 50%;
+    height: 100%;
+}
+
+.contato input{
+    width: 40%;
+    border: none;
+    border-radius: 25px;
+    height: 3vh;
+    text-align: center;
+}
+
+.contato button{
+    border: none;
+    height: 4vh;
+    border-radius: 25px;
+    width: 20%;
+    color: #214B63;
+}
+
