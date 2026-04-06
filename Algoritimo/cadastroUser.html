@@ -13,10 +13,15 @@
                 <img src="./img/THERMUS.png">
             </div>
             <div class="campos">
-                <input type="text" class="campo" placeholder="Nome Completo" id="InNome">
-                <input type="text" class="campo" placeholder="Email" id="InEmail">
-                <input type="text" class="campo" placeholder="Intituição" id="InInstituicao">
-                <input type="text" class="campo" placeholder="Cargo" id="InCargo">
+                    <input type="text" class="campo" placeholder="Nome Completo" id="InNome">
+                    <p style="display: none; color: red;" id="nomeIn">Nome Inválido</p>
+                    <input type="text" class="campo" placeholder="Email" id="InEmail">
+                    <p style="display: none; color: red;" id="emailIn">Email Inválido</p>
+                    <input type="text" class="campo" placeholder="Intituição" id="InInstituicao">
+                    <p style="display: none; color: red;" id="instituicaoIn">instituição Inválida</p>
+                    <input type="text" class="campo" placeholder="Cargo" id="InCargo">
+                    <p style="display: none; color: red;" id="cargoIn">Cargo Inválido</p>
+                    
             </div>
             <div class="buttonL" id="div_mensagem">
                 <button class="btnLogin" onclick="cadastrar()">Cadastrar</button>
@@ -40,13 +45,23 @@ function cadastrar() {
     let posCom = email.indexOf('.com');
 
     if (nome == '') {
-        div_mensagem.innerHTML = 'Preencha o nome';
+        InNome.style.border = "solid red 3px";
+        nomeIn.style.display = "block"
         return;
+    }else{
+        InNome.style.border = "none"
+        nomeIn.style.display = "none"
     }
 
     if (email == '') {
-        div_mensagem.innerHTML = 'Preencha o email';
+        InEmail.style.border = "solid red 3px";
+        emailIn.style.display = "block"
         return;
+    }else{
+        InEmail.style.border = "none";
+        emailIn.style.display = "none";
+
+
     }
 
     if ( //verifica se tem algo antes do @, algo entre o @ e o .com e se termina com .com
@@ -54,18 +69,31 @@ function cadastrar() {
         posCom <= posArroba + 1 || 
         posCom != email.length - 4
     ) {
-        div_mensagem.innerHTML = 'Email inválido';
+        InEmail.style.border = "solid red 3px";
+        emailIn.style.display = "block"
         return;
+    } else{
+        InEmail.style.border = "none";
+        emailIn.style.display = "none";
     }
 
     if (instituicao == '') {
-        div_mensagem.innerHTML = 'Preencha a instituição';
+       InInstituicao.style.border = "solid red 3px";
+       instituicaoIn.style.display = "block"
         return;
+    } else{
+        InInstituicao.style.border = "none";
+       instituicaoIn.style.display = "none"
+
     }
 
     if (cargo == '') {
-        div_mensagem.innerHTML = 'Preencha o cargo';
+       InCargo.style.border = "solid red 3px";
+       cargoIn.style.display = "block"
         return;
+    } else{
+        InCargo.style.border = "none";
+       cargoIn.style.display = "none"
     }
 
     div_mensagem.innerHTML = 'Cadastro realizado com sucesso';
