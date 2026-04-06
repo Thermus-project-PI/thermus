@@ -13,13 +13,13 @@
                 <img src="./img/THERMUS.png">
             </div>
             <div class="campos">
-                <input type="text" class="campo" placeholder="Nome Completo">
-                <input type="text" class="campo" placeholder="Email">
-                <input type="text" class="campo" placeholder="Intituição">
-                <input type="text" class="campo" placeholder="Cargo">
+                <input type="text" class="campo" placeholder="Nome Completo" id="InNome">
+                <input type="text" class="campo" placeholder="Email" id="InEmail">
+                <input type="text" class="campo" placeholder="Intituição" id="InInstituicao">
+                <input type="text" class="campo" placeholder="Cargo" id="InCargo">
             </div>
-            <div class="buttonL">
-                <button class="btnLogin">Cadastrar</button>
+            <div class="buttonL" id="div_mensagem">
+                <button class="btnLogin" onclick="cadastrar()">Cadastrar</button>
             </div>
             <div class="urlCadastro">
                 <p>Ja possui uma conta?<a href="/login.html">Clique aqui</a></p>
@@ -29,29 +29,45 @@
 </body>
 </html>
 <script>
- function cadastrar() {
-        let nome = ipt_nome.value;
-        let email = ipt_email.value;
-        let senha = ipt_senha.value;
-        let cnpj = ipt_cnpj.value;
-        let status = ipt_ativo.value;
-        let texto = '';
 
-        let posArroba = email.indexOf('@');
-        let posCom = email.indexOf('.com');
+function cadastrar() {
+    let nome = InNome.value;
+    let email = InEmail.value;
+    let instituicao = InInstituicao.value;
+    let cargo = InCargo.value;
 
-        if (nome == '' || email == '' || senha == '' || cnpj == '') {
-            texto = 'Preencha todos os campos corretamente';
-        }else if (!(posArroba != -1 && posCom != -1 && posArroba < posCom)) {
-            texto = 'Email inválido';
-        }else if (cnpj.length != 14) {
-            texto = 'CNPJ deve ter 14 caracteres';
-        }else if (senha.length < 6) {
-            texto = 'Senha deve ter pelo menos 6 caracteres';
-        }else {
-            texto = 'Cadastro realizado com sucesso';
-        }
+    let posArroba = email.indexOf('@');
+    let posCom = email.indexOf('.com');
 
-        div_mensagem.innerHTML = texto;
+    if (nome == '') {
+        div_mensagem.innerHTML = 'Preencha o nome';
+        return;
     }
+
+    if (email == '') {
+        div_mensagem.innerHTML = 'Preencha o email';
+        return;
+    }
+
+    if ( //verifica se tem algo antes do @, algo entre o @ e o .com e se termina com .com
+        posArroba <= 0 || 
+        posCom <= posArroba + 1 || 
+        posCom != email.length - 4
+    ) {
+        div_mensagem.innerHTML = 'Email inválido';
+        return;
+    }
+
+    if (instituicao == '') {
+        div_mensagem.innerHTML = 'Preencha a instituição';
+        return;
+    }
+
+    if (cargo == '') {
+        div_mensagem.innerHTML = 'Preencha o cargo';
+        return;
+    }
+
+    div_mensagem.innerHTML = 'Cadastro realizado com sucesso';
+}
 </script>
