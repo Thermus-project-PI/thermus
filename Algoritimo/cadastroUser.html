@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <div class="card-cadastro">
-        <a href="/index"><img src="img/seta.png" class="seta"></a>
-        <img src="img/logo.png" class="logo" alt="logo thermus">
-        <h1 class="titulo">CADASTRO</h1>
-            <div class="campo">
-                <input type="text" id="InNome" placeholder="Nome Completo">
-                <input type="text" id="InEmail" placeholder="Email">
-                <input type="text" id="InInstituicao" placeholder="Instituição">
-                <input type="text" id="InCargo" placeholder="Cargo">    
-                <button onclick="cadastrar()" class="botao">Entrar</button>
-                <p class="mensagem">Já possui conta? <a href="/login.html">Clique Aqui</a></p>
-                <div id="div_mensagem" class="aviso"></div> 
+    <div class="container">
+        <div class="content">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo Thermus">
+                <img src="./img/THERMUS.png">
             </div>
+            <div class="campos">
+                <input type="text" class="campo" placeholder="Nome Completo">
+                <input type="text" class="campo" placeholder="Email">
+                <input type="text" class="campo" placeholder="Intituição">
+                <input type="text" class="campo" placeholder="Cargo">
+            </div>
+            <div class="buttonL">
+                <button class="btnLogin">Cadastrar</button>
+            </div>
+            <div class="urlCadastro">
+                <p>Ja possui uma conta?<a href="/login.html">Clique aqui</a></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 <script>
