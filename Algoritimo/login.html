@@ -4,27 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
 
 <body>
     <div class="container">
         <div class="content">
-            <div class="logo">
+        <a href="/index.html"><img src="img/seta.png" class="seta"></a>
+        <div class="logo">
                 <img src="./img/logo.png" alt="Logo Thermus">
                 <img src="./img/THERMUS.png">
-            </div>
-            <div class="campos" >
-                <input type="text" class="campo" placeholder="Email" id="ipt_email">
-                <input type="password" class="campo" placeholder="Senha" id="ipt_senha">
-                <p>Esqueceu sua senha?<a href="/">Clique aqui</a></p>
-            </div>
-            <div class="buttonL" id="div_mensagem">
-                <button class="btnLogin" onclick="validar()">Entra</button>
-            </div>
-            <div class="urlCadastro">
-                <p>Ainda não possui uma conta?<a href="/login.html">Clique aqui</a></p>
+        </div>
+    <div class="campos">
+        <input class="campo" type="email" id="ipt_email" placeholder="Email">
+        <input class="campo" type="password" id="ipt_senha" placeholder="Digite sua senha:">
+        <button class="botao" onclick="validar()">Entrar</button>
+        <p class="mensagem">Ainda não possui uma conta?  <a href="/cadastroUser.html">cadastre-se</a></p>
+        <div id="div_mensagem" class="aviso"></div> 
             </div>
         </div>
     </div>

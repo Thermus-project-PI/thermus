@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="content">
+            <a href="/index.html"><img src="img/seta.png" class="seta"></a>
             <div class="logo">
                 <img src="./img/logo.png" alt="Logo Thermus">
                 <img src="./img/THERMUS.png">
@@ -21,13 +22,11 @@
                     <p style="display: none; color: red;" id="instituicaoIn">instituição Inválida</p>
                     <input type="text" class="campo" placeholder="Cargo" id="InCargo">
                     <p style="display: none; color: red;" id="cargoIn">Cargo Inválido</p>
+
+                    <button class="botao" onclick="cadastrar()">Cadastrar</button>
+                    <p class="mensagem">Ja possui uma conta? <a href="/login.html">Clique aqui</a></p>
+                    <div id="div_mensagem" class="aviso"></div> 
                     
-            </div>
-            <div class="buttonL" id="div_mensagem">
-                <button class="btnLogin" onclick="cadastrar()">Cadastrar</button>
-            </div>
-            <div class="urlCadastro">
-                <p>Ja possui uma conta?<a href="/login.html">Clique aqui</a></p>
             </div>
         </div>
     </div>
