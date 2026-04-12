@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +11,7 @@
 <body>
     <div class="container">
         <div class="content">
+            <a href="/index.html"><img src="/Algoritimo/img/seta.png" class="seta"></a>
             <div class="logo">
                 <img src="/Algoritimo/img/logo.png" alt="Logo Thermus">
                 <img src="/Algoritimo/img/THERMUS.png">
@@ -22,12 +22,16 @@
                 <input type="text" class="campo" placeholder="Senha" id="ipt_senha">
                 <input type="text" class="campo" placeholder="Intituição" id="ipt_instituicao">
                 <input type="text" class="campo" placeholder="Cnpj" id="ipt_cnpj">
+
+                <button class="botao" onclick="cadastrar()">Cadastrar</button>
+                <p class="mensagem">Ja possui uma conta? <a href="/login.html">Clique aqui</a></p>
+                <div class="aviso" id="div_mensagem"></div>
             </div>
             <div class="buttonL" id="div_mensagem">
                 <button class="btnLogin" onclick="cadastrar()">Cadastrar</button>
             </div>
             <div class="urlCadastro" >
-                <p>Ja possui uma conta?<a href="/Algoritimo/auth/museu/login.html">Clique aqui</a></p>
+                <p>Ja possui uma conta?<a href="/login.html">Clique aqui</a></p>
             </div>
         </div>
     </div>

@@ -1,4 +1,22 @@
+
 *{
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 16px;
+}
+header{
+    padding: 0;
+    margin: 0; 
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+footer{
     padding: 0;
     margin: 0;
 }
@@ -11,10 +29,11 @@
 }
 
 .titulo{
-    font-size: 6rem;
+    font-size: 60px;
+    font-weight: 300;
     display: flex;
     align-items: center;
-    margin-top: 1%;
+    margin-top: 2vh;
     justify-content: center;
     color: #214B63;
     width: 100%;
@@ -31,7 +50,7 @@
     align-items: center;
     background-color: #21516C;
     width: 100%;
-    height: 10vh;
+    height: 11vh;
 }
 
 .logo{
@@ -62,7 +81,7 @@
 .links a{
     text-decoration: none;
     color: white;
-    font-size: 2rem;
+    font-size: 1.4rem;
 }
 
 .links a:hover{
@@ -89,7 +108,7 @@
     flex: row;
     align-items: center;
     justify-content: flex-start;
-    background-image: url("../img/banner.png");
+    background-image: url("/Algoritimo/img/banner.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -117,19 +136,19 @@
     justify-items: center;
     align-items: center;
     width: 20%;
-    height: 3vh;
+    height: 30px;
     background-color: #214B63;
+    font-size: 1rem;
     font-weight: bold;
     border-radius: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
     color: white;
+    padding: 5px 10px;
 }
 
 .banner .titulo{
     display: flex;
     color: white;
-    font-size: 7rem;
+    font-size: 3.5rem;
     width: 60%;
 }
 
@@ -147,8 +166,8 @@
     width: 100%;
     height: fit-content;
     display: flex;
-    margin-top: 5%;
-    gap: 7vh;
+    margin-top: 2%;
+    gap: 3vh;
     flex-direction: column;
     justify-content: center;
     justify-items: center;
@@ -166,11 +185,12 @@
 }
 
 .content img{
-    width: 40%;
+    width:40%;
+    margin-left: 28px;
 }
 
 .texto{
-    font-size: 3rem;
+    font-size: 1.9rem;
     width: 50%;
 }
 
@@ -207,10 +227,10 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     width: 30%;
     gap: 3vh;
-    height: 50vh;
+    height: auto;
     border: solid #214B63 3px;
     border-radius: 35px;
 }
@@ -221,7 +241,7 @@
 }
 
 .card p{
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
 }
 
@@ -243,6 +263,7 @@
     justify-content: center;
     align-items: center;
     justify-items: center;
+    margin-top: 6vh;
     margin: 5vh;
     border: solid #214B63 5px;
     border-radius: 25px;
@@ -250,7 +271,8 @@
 
 .areacliente p{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-top: 30px;
 }
 
 .areacliente img{
@@ -286,7 +308,7 @@
     justify-content: center;
     align-items: center;
     justify-self: center;
-    height:fit-content;
+    height: fit-content;
     width: 100%;
     background-color: #214B63;
 }
@@ -295,7 +317,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 1%;
+    margin-left: 3%;
 }
 
 .info p{
@@ -303,6 +325,8 @@
     text-align: left;
     font-size: 1rem;
     width: 50%;
+    margin-left: 3%;
+
 }
 
 .footer .titulo{
@@ -317,7 +341,7 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-    gap: 1vh;
+    gap: 2vh;
     width: 50%;
     height: 100%;
 }
@@ -326,15 +350,15 @@
     width: 40%;
     border: none;
     border-radius: 25px;
-    height: 3vh;
+    height: 5vh;
     text-align: center;
 }
 
 .contato button{
     border: none;
-    height: 4vh;
+    height: 5vh;
     border-radius: 25px;
     width: 20%;
-    color: #214B63;
+    color: #132a37;
+    font-weight: 700;
 }
-
