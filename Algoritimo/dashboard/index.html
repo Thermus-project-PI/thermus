@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Algoritimo/styles/stylesDashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="content">
+       <aside>
+            <div class="top">
+                <div class="logo-container">
+                    <img src="/Algoritimo/img/logo-fina.svg" alt="logo" class="logo">
+               </div>
+               <div class="links-container">
+                    <div class="link selected">
+                        <a href="/Algoritimo/dashboard/index.html">Dashboard</a>
+                    </div>
+                    <div class="link">
+                        <a href="/Algoritimo/dashboard/sensores.html">Sensores</a>
+                    </div>
+                    <div class="link">
+                        <a href="/Algoritimo/dashboard/alertas.html">Alertas</a>
+                    </div>
+                    <div class="link">
+                        <a href="/Algoritimo/dashboard/relatorios.html">Relatórios</a>
+                    </div>
+               </div>
+            </div>
+            <div class="bottom">
+                <div class="btn-container">
+                     <button class="btn">
+                        <span>Sair</span>
+                        <i class="fa-solid fa-arrow-right-from-bracket" class="btn-icon-logout"></i>
+                    </button>
+                </div>
+            </div>
+       </aside>
+       <main>
+            <div class="left">
+                 <div class="cards-container">
+                    <div class="card">
+                        <div class="icon-container icon-green">
+                            <i class="fa-solid fa-temperature-full"></i>
+                        </div>
+                        <div class="card-title">
+                            <h1>Temperatura média</h1>
+                        </div>
+                        <div class="main-info main-info-green">
+                            <h1>23,4°C</h1>
+                        </div>
+                        <div class="sub-info">
+                            <h2>Hoje ·</h2>
+                            <h2>todos os sensores</h2>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon-container icon-blue">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <div class="card-title">
+                            <h1>Umidade média</h1>
+                        </div>
+                            <div class="main-info main-info-blue">
+                                <h1>67%</h1>
+                            </div>
+                            <div class="sub-info">
+                                <h2>Hoje ·</h2>
+                                <h2>todos os sensores</h2>
+                            </div>
+                    </div>
+                    <div class="card">
+                        <div class="icon-container icon-red">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="card-title">
+                            <h1>Alertas Hoje</h1>
+                        </div>
+                            <div class="main-info main-info-red">
+                                <h1>4</h1>
+                            </div>
+                            <div class="sub-info">
+                                <h2>2 risco ·</h2>
+                                <h2>2 alerta</h2>
+                            </div>
+                    </div>
+                    </div>
+                <div class="charts">
+                    <div class="buttons">
+                        <h1>filtros:</h1>
+                        <button class="btn-chart btn-chart-umidity" onclick="change('humidity')">Umidade</button>
+                        <button class="btn-chart btn-chart-temperature" onclick="change('temperature')">Temperatura</button>
+                    </div>
+                    <div class="chart flex" id="umid-div">
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="last-alerts">
+                    <div class="last-alerts-title">
+                        <h1>Últimos alertas do dia</h1>
+                    </div>
+                    <div class="alerts">
+                        <div class="alert">
+                            <div class="circle"></div>
+                            <div class="alert-title">Noite Estrelada</div>
+                            <div class="alert-info">
+                                <h2>9:12</h2>
+                                <h2>Umidade 1,6%</h2>
+                                <h2>Temp 20°C</h2>
+                            </div>
+                            <div class="alert-status alert-status-red">
+                                <h1>RISCO</h1>
+                            </div>
+                        </div>
+                        <div class="alert">
+                            <div class="circle"></div>
+                            <div class="alert-title">Noite Estrelada</div>
+                            <div class="alert-info">
+                                <h2>9:12</h2>
+                                <h2>Umidade 1,6%</h2>
+                                <h2>Temp 20°C</h2>
+                            </div>
+                            <div class="alert-status alert-status-red">
+                                <h1>RISCO</h1>
+                            </div>
+                        </div>
+                        <div class="alert">
+                            <div class="circle"></div>
+                            <div class="alert-title">Noite Estrelada</div>
+                            <div class="alert-info">
+                                <h2>9:12</h2>
+                                <h2>Umidade 1,6%</h2>
+                                <h2>Temp 20°C</h2>
+                            </div>
+                            <div class="alert-status alert-status-red">
+                                <h1>RISCO</h1>
+                            </div>
+                        </div>
+                        <div class="alert">
+                            <div class="circle"></div>
+                            <div class="alert-title">Noite Estrelada</div>
+                            <div class="alert-info">
+                                <h2>9:12</h2>
+                                <h2>Umidade 1,6%</h2>
+                                <h2>Temp 20°C</h2>
+                            </div>
+                            <div class="alert-status alert-status-red">
+                                <h1>RISCO</h1>
+                            </div>
+                        </div>
+                        <div class="alert">
+                            <div class="circle"></div>
+                            <div class="alert-title">Noite Estrelada</div>
+                            <div class="alert-info">
+                                <h2>9:12</h2>
+                                <h2>Umidade 1,6%</h2>
+                                <h2>Temp 20°C</h2>
+                            </div>
+                            <div class="alert-status alert-status-red">
+                                <h1>RISCO</h1>
+                            </div>
+                        </div>
+                        <div class="alert">
+                            <div class="circle"></div>
+                            <div class="alert-title">Noite Estrelada</div>
+                            <div class="alert-info">
+                                <h2>9:12</h2>
+                                <h2>Umidade 1,6%</h2>
+                                <h2>Temp 20°C</h2>
+                            </div>
+                            <div class="alert-status alert-status-red">
+                                <h1>RISCO</h1>
+                            </div>
+                        </div>
+                        <div class="alert">
+                            <div class="circle"></div>
+                            <div class="alert-title">Noite Estrelada</div>
+                            <div class="alert-info">
+                                <h2>9:12</h2>
+                                <h2>Umidade 1,6%</h2>
+                                <h2>Temp 20°C</h2>
+                            </div>
+                            <div class="alert-status alert-status-red">
+                                <h1>RISCO</h1>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>
+       </main>
+    </div>
+</body>
+<script>
+
+    const humidity = {
+                    label: 'Umidade',
+                    data: [69, 61, 59, 50, 58, 98, 97, 60, 56, 60],
+                    borderWidth: 1,
+                    borderColor:"#2E6AA3",
+                    backgroundColor: "#2E6AA320",
+                    fill: true
+                }
+
+    const temperature = {
+                    label: 'Temperatura',
+                    data: [24, 23, 22, 21, 22, 20, 22, 25, 24, 25],
+                    borderWidth: 1,
+                    borderColor:"#348A6F",
+                    backgroundColor: "#348A6F20",
+                    fill:true
+                }
+
+    let dataset = humidity;
+
+    function change(data){
+        if(data == "temperature"){
+            dataset = temperature;
+            graf.data.datasets[0] = dataset;
+        }else if(data == "humidity"){
+            dataset = humidity;
+            graf.data.datasets[0] = dataset;
+        }
+
+        graf.update();
+    }
+
+    const chart = document.getElementById("chart");
+    const graf = new Chart(chart, {
+        type: 'line',
+        data: {
+        labels: [
+            '14:00', 
+            '16:00', 
+            '18:00', 
+            '20:00', 
+            '22:00',
+            '00:00',
+            '02:00',
+            '04:00', 
+            '06:00', 
+            '08:00',
+        ],
+            datasets: [dataset]
+        },
+        options: {
+        scales: {
+            y: {
+            min: 0,
+            max:100,
+            beginAtZero: true,
+            ticks:{
+                stepSize: 10
+            }
+            }
+        }
+        }
+    });
+</script>
+</html>

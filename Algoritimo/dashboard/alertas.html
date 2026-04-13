@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Algoritimo/styles/stylesDashboard.css">
+    <link rel="stylesheet" href="/Algoritimo/styles/styleDashboardAlert.css">
+    <title>Dashboard - Alertas</title>
+</head>
+<body>
+    <div class="content">
+        <aside>
+                 <div class="top">
+                     <div class="logo-container">
+                         <img src="/Algoritimo/img/logo-fina.svg" alt="logo" class="logo">
+                    </div>
+                    <div class="links-container">
+                         <div class="link">
+                             <a href="/Algoritimo/dashboard/index.html">Dashboard</a>
+                         </div>
+                         <div class="link">
+                             <a href="/Algoritimo/dashboard/sensores.html">Sensores</a>
+                         </div>
+                         <div class="link selected">
+                             <a href="/Algoritimo/dashboard/alertas.html">Alertas</a>
+                         </div>
+                         <div class="link">
+                             <a href="/Algoritimo/dashboard/relatorios.html">Relatórios</a>
+                         </div>
+                    </div>
+                 </div>
+                 <div class="bottom">
+                     <div class="btn-container">
+                          <button class="btn">
+                             <span>Sair</span>
+                             <i class="fa-solid fa-arrow-right-from-bracket" class="btn-icon-logout"></i>
+                         </button>
+                     </div>
+                 </div>
+         </aside> 
+         <div class="main">
+            <div class="kpis">
+                <div class="kpi">
+                    <div class="kpi-title">
+                        <h2>Total de regsitros</h2>
+                    </div>
+                    <div class="kpi-main">
+                        <h1>9</h1>
+                    </div>
+                </div>
+                <div class="kpi">
+                    <div class="kpi-title">
+                        <h2>Atenção</h2>
+                    </div>
+                    <div class="kpi-main kpi-main-yellow">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <div class="kpi">
+                    <div class="kpi-title">
+                        <h2>Risco</h2>
+                    </div>
+                    <div class="kpi-main kpi-main-red">
+                        <h1>3</h1>
+                    </div>
+                </div>
+                <div class="kpi">
+                    <div class="kpi-title">
+                        <h2>Alerta Crítico</h2>
+                    </div>
+                    <div class="kpi-main kpi-main-purple">
+                        <h1>3</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="alertas-container">
+                <div class="filters">
+                    <h3>Filtrar:</h3>
+                    <div class="filter filter-blue">
+                        <p onclick="change('todos')">Todos</p>
+                    </div>
+                    <div class="filter filter-yellow">
+                        <p onclick="change('atencao')">Atenção</p>
+                    </div>
+                    <div class="filter filter-red">
+                        <p onclick="change('risco')">Risco</p>
+                    </div>
+                    <div class="filter filter-purple">
+                        <p onclick="change('alerta')">Alerta</p>
+                    </div>
+                </div>
+                <table class="alertas">
+                    <tr>
+                        <th>Data/hora</th>
+                        <th>Sensor</th>
+                        <th>Temp(°C)>
+                        <th>Umidade(%)</th>
+                        <th>ΔTemp</th>
+                        <th>ΔUmidade</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td>02/04 10:00</td>
+                        <td>Noite Estrelada</td>
+                        <td>20</td>
+                        <td>92</td>
+                        <td>18.4</td>
+                        <td>1.6</td>
+                        <div class="alerta-status">
+                            <td>Risco</td>
+                        </div>
+                    </tr>
+                </table>
+            </div>
+         </div>
+    </div>
+</body>
+</html>
+<script>
+    function change(){
+        
+    }
+</script>

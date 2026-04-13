@@ -1,0 +1,108 @@
+.main{
+    width: 1fr;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    background-color: #F4F6F8;
+}
+
+.kpis{
+    width: 100%;
+    height: 15vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: 30px;
+}
+
+.kpi{
+    width: 23%;
+    height: 100%;
+
+    background-color: white;
+
+    border-radius: 25px;
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 20px;
+}
+
+.kpi-title{
+    font-size: 1rem;
+}
+
+.kpi-main{
+    font-size: 1.5rem;
+}
+
+.kpi-main-yellow{color: #EFAF00;}
+.kpi-main-red{color: #FF0000;}
+.kpi-main-purple{color: #771580;}
+
+.alertas-container{
+    width: 95%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.filters{
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.filter{
+    width: 80px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+    
+    transition: all 200ms ease;
+}
+
+.filter:hover{
+    transform: scale(1.05);
+}
+
+.filter-blue{color: #21516C; background-color: #3c98ce52;}
+.filter-blue:hover{border: solid 1px #21516C;}
+.filter-yellow{color: #BE8C02; background-color: #efaf004f;}
+.filter-yellow:hover{border: solid 1px #BE8C02;}
+.filter-red{color: #FF0000; background-color: #FDE8E8;}
+.filter-red:hover{border: solid 1px #FF0000;}
+.filter-purple{color: #53005B; background-color: #7715802f;}
+.filter-purple:hover{border: solid 1px #53005B;}
+
+.alertas{
+    width: 100%;
+    height: 90%;
+
+    background-color: white;
+
+    border-radius:25px;
+
+    margin-bottom:30px;
+
+    font-size: 1.5rem;
+}
+
