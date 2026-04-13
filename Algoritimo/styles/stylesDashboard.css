@@ -372,3 +372,17 @@ main{
     background-color: grey;
 }
 
+
+.alert-status{
+    font-weight: 200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+}
+
+.alert-status-red{color:#D24848; background-color: #FDE8E8; border: solid 1px #D24848;}
+.alert-status-purple{color: #53005B; background-color: #7715802f; border: solid 1px #53005B;}
+
