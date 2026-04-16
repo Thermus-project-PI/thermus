@@ -17,8 +17,10 @@
                 <img src="/Algoritimo/img/THERMUS.png">
             </div>
             <div class="campos" >
-                <input type="text" class="campo" placeholder="Email" id="ipt_email">
-                <input type="password" class="campo" placeholder="Senha" id="ipt_senha">
+                <input type="text" class="campo" placeholder="Email" id="InEmail">
+                <p style="display: none; color: red;" id="emailIn">Email Inválido</p>
+                <input type="password" class="campo" placeholder="Senha" id="InSenha">
+                <p style="display: none; color: red;" id="senhaIn">Senha Inválida</p>
                 <p class="mensagem">Esqueceu sua senha?<a href="/Algoritimo/auth/">Clique aqui</a></p>
                 <button class="botao" onclick="validar()">Entrar</button>
                 <p class="mensagem">Ainda não possui uma conta?  <a href="/Algoritimo/auth/museu/cadastroMuseu.html">cadastre-se</a></p>
@@ -32,29 +34,39 @@
 <script>
 
 function validar() {
-    let email = ipt_email.value;
-    let senha = ipt_senha.value;
+    let email = InEmail.value;
+    let senha = InSenha.value;
 
     let posArroba = email.indexOf('@');
     let posCom = email.indexOf('.com');
 
-    if (email == '') {
-        div_mensagem.innerHTML = 'Preencha o email';
+     if (email == '') {
+        InEmail.style.border = "solid red 3px";
+        emailIn.style.display = "block"
         return;
-    }
-
-    if (
+    }else{
+        InSenha.style.border = "none"
+        senhaIn.style.display = "none"
+    }if(
         posArroba <= 0 || 
         posCom <= posArroba + 1 || 
         posCom != email.length - 4
     ) {
-        div_mensagem.innerHTML = 'Email inválido';
+        InEmail.style.border = "solid red 3px";
+        emailIn.style.display = "block"
         return;
-    }
+    }else{
+        InEmail.style.border = "none";
+        emailIn.style.display = "none";
 
-    if (senha == '') {
-        div_mensagem.innerHTML = 'Preencha a senha';
+    }if(senha == '') {
+        InSenha.style.border = "solid red 3px";
+        senhaIn.style.display = "none";
         return;
+        
+    }else{
+        InSenha.style.border = "none";
+        senhaIn.style.display = "none";
     }
 
     div_mensagem.innerHTML = 'Login válido';
