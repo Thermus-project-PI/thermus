@@ -17,12 +17,16 @@
                 <img src="/Algoritimo/img/THERMUS.png">
             </div>
             <div class="campos">
-                <input type="text" class="campo" placeholder="Nome Completo" id="ipt_nome">
-                <input type="text" class="campo" placeholder="Email" id="ipt_email">
-                <input type="text" class="campo" placeholder="Senha" id="ipt_senha">
-                <input type="text" class="campo" placeholder="Intituição" id="ipt_instituicao">
-                <input type="text" class="campo" placeholder="Cnpj" id="ipt_cnpj">
-
+                <input type="text" class="campo" placeholder="Nome Completo" id="InNome">
+                <p style="display: none; color: red;" id="nomeIn">Nome Inválido</p>
+                <input type="text" class="campo" placeholder="Email" id="InEmail">
+                <p style="display: none; color: red;" id="emailIn">Email Inválido</p>
+                <input type="text" class="campo" placeholder="Senha" id="InSenha">
+                <p style="display: none; color: red;" id="senhaIn">Senha Inválida</p>
+                <input type="text" class="campo" placeholder="Intituição" id="InInstituicao">
+                <p style="display: none; color: red;" id="instituicaoIn">instituição Inválida</p>
+                <input type="text" class="campo" placeholder="Cnpj" id="InCnpj" maxlength="14">
+                <p style="display: none; color: red;" id="cnpjIn">instituição Inválida</p>
                 <button class="botao" onclick="cadastrar()">Cadastrar</button>
                 <p class="mensagem">Ja possui uma conta? <a href="/Algoritimo/auth/museu/login.html">Clique aqui</a></p>
                 <div class="aviso" id="div_mensagem"></div>
@@ -33,54 +37,81 @@
 </html>
 <script>
  function cadastrar() {
-    let nome = ipt_nome.value;
-    let email = ipt_email.value;
-    let senha = ipt_senha.value;
-    let cnpj = ipt_cnpj.value;
-    let instituicao = ipt_instituicao.value
+    let nome = InNome.value;
+    let email = InEmail.value;
+    let senha = InSenha.value;
+    let cnpj = InCnpj.value;
+    let instituicao = InInstituicao.value
    
     
 
     let posArroba = email.indexOf('@');
     let posCom = email.indexOf('.com');
 
-    if (nome == '') {
-        div_mensagem.innerHTML = 'Preencha o nome do museu';
+       if (nome == '') {
+        InNome.style.border = "solid red 3px";
+        nomeIn.style.display = "block"
         return;
+    }else{
+        InNome.style.border = "none"
+        nomeIn.style.display = "none"
     }
 
     if (email == '') {
-        div_mensagem.innerHTML = 'Preencha o email';
+        InEmail.style.border = "solid red 3px";
+        emailIn.style.display = "block"
         return;
+    }else{
+        InEmail.style.border = "none";
+        emailIn.style.display = "none";
     }
 
-    if (
+    
+    if ( //verifica se tem @, algo entre o @ e o .com e se termina com .com
         posArroba <= 0 || 
         posCom <= posArroba + 1 || 
         posCom != email.length - 4
     ) {
-        div_mensagem.innerHTML = 'Email inválido';
+        InEmail.style.border = "solid red 3px";
+        emailIn.style.display = "block"
         return;
+    } else{
+        InEmail.style.border = "none";
+        emailIn.style.display = "none";
     }
 
     if (senha == '') {
-        div_mensagem.innerHTML = 'Preencha a senha';
+        InSenha.style.border = "solid red 3px";
+        emailIn.style.display = "none";
         return;
+    } else{
+        InSenha.style.border = "none";
+        emailIn.style.display = "none";
     }
 
     if (senha.length < 6) {
-        div_mensagem.innerHTML = 'Senha deve ter pelo menos 6 caracteres';
+        InSenha.style.border = "solid red 3px";
+        emailIn.style.display = "none";
         return;
+    }else{
+        InSenha.style.border = "none";
+        emailIn.style.display = "none";
     }
 
     if (cnpj == '') {
-        div_mensagem.innerHTML = 'Preencha o CNPJ';
-        return;
+        InCnpj.style.border = "solid red 3px";
+        cnpjin.style.border = "none";
+    }else{
+        InCnpj.style.border = "none";
+        cnpjin.style.border = "none";
     }
 
     if (cnpj.length != 14) {
-        div_mensagem.innerHTML = 'CNPJ deve ter 14 caracteres';
-        return;
+        InCnpj.style.border = "solid red 3px";
+        cnpjin.style.border = "none";
+    } else{
+        InCnpj.style.border = "none";
+        cnpjin.style.border = "none";
     }
 
     div_mensagem.innerHTML = 'Cadastro realizado com sucesso';
