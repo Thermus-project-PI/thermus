@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Algoritimo/styles/stylesDashboard.css">
+    <link rel="stylesheet" href="/Algoritimo/styles/styleDashboardsRelatorios.css">
     <title>Dashboard - Relatórios</title>
 </head>
+
 <body>
-    <aside>
+    <div class="content">
+        <aside>
             <div class="top">
                 <div class="logo-container">
                     <img src="/Algoritimo/img/logo-fina.svg" alt="logo" class="logo">
-               </div>
-               <div class="links-container">
+                </div>
+                <div class="links-container">
                     <div class="link">
                         <a href="/Algoritimo/dashboard/index.html">Dashboard</a>
                     </div>
@@ -25,16 +29,114 @@
                     <div class="link selected">
                         <a href="/Algoritimo/dashboard/relatorios.html">Relatórios</a>
                     </div>
-               </div>
+                </div>
             </div>
             <div class="bottom">
                 <div class="btn-container">
-                     <button class="btn">
+                    <button class="btn">
                         <span>Sair</span>
                         <i class="fa-solid fa-arrow-right-from-bracket" class="btn-icon-logout"></i>
                     </button>
                 </div>
             </div>
-       </aside>
+        </aside>
+        <div class="big-container">
+            <div class="caixote1">
+                <div class="topo">
+                    <h1>Mapa de status — semana (por sensor × hora)</h1>
+                    <h2>Cada célula = um horário de leitura</h2>
+                </div>
+                <div class="fundo">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>08h</th>
+                            <th>10h</th>
+                            <th>12h</th>
+                            <th>14h</th>
+                            <th>16h</th>
+                            <th>18h</th>
+                            <th>Máx</th>
+                        </tr>
+                        <tr>
+                            <td class="titulo_tb">Monalisa</td>
+                            <td class="ok">OK</td>
+                            <td class="ok">OK</td>
+                            <td class="alerta">Alerta</td>
+                            <td class="risco">Risco</td>
+                            <td class="ok">OK</td>
+                            <td class="ok">OK</td>
+                            <td class="temp">25°C</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo_tb">N. Estrelada</td>
+                            <td class="ok">OK</td>
+                            <td class="risco">Risco</td>
+                            <td class="risco">Risco</td>
+                            <td class="ok">OK</td>
+                            <td class="ok">OK</td>
+                            <td class="ok">OK</td>
+                            <td class="temp">22°C</td>
+                        </tr>
+                        <tr>
+                            <td class="titulo_tb">O Grito</td>
+                            <td class="ok">OK</td>
+                            <td class="alerta">Alerta</td>
+                            <td class="alerta">Alerta</td>
+                            <td class="atencao">Atenção</td>
+                            <td class="atencao">Atenção</td>
+                            <td class="atencao">Atenção</td>
+                            <td class="temp">26°C</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="caixote2">
+                <div class="subcaixote">
+                    <h2>Estatísticas Consolidadas</h2>
+                    <div class="subcaixote_texto">
+                        <p>Temp. média geral</p>
+                        <p>22,8°C</p>
+                    </div>
+                    <div class="subcaixote_texto">
+                        <p>Temp. máxima registrada</p>
+                        <p>26°C - O Grito · 12h</p>
+                    </div>
+                    <div class="subcaixote_texto">
+                        <p>Umidade média geral</p>
+                        <p>67%</p>
+                    </div>
+                    <div class="subcaixote_texto">
+                        <p>Sensor com mais alertas</p>
+                        <p>O Grito · 6 ocorri.</p>
+                    </div>
+                    <div class="subcaixote_texto">
+                        <p>Horário crítico</p>
+                        <p>10:00 - 12:00</p>
+                    </div>
+                    <div class="subcaixote_texto">
+                        <p>Dias sem ocorrência crítica</p>
+                        <p>1 de 2</p>
+                    </div>
+                </div>
+                <div class="subcaixote">
+                    <h2>Ocorrências por sensor</h2>
+                    <div class="subcaixote_linha">
+                        <p>O Grito</p>
+                        <div class="barra_rosa"></div>
+                    </div>
+                    <div class="subcaixote_linha">
+                        <p>N. Estrelada</p>
+                        <div class="barra_rosa"></div>
+                    </div>
+                    <div class="subcaixote_linha">
+                        <p>Monalisa</p>
+                        <div class="barra_rosa"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

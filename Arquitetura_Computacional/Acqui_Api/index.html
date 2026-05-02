@@ -2,10 +2,12 @@
 <html>
 
 <head>
+    <!--Conseguir testar se a api esta recuperando de forma correta o dado do arduino
+    -->
     <title>Graphics</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
+                                                                                                                                                                                                                        
 <body>
 
     <h1>Graphics</h1>
@@ -18,12 +20,13 @@
         </div>
     </div>
 
+    
     <script>
-        var sensorUmidade = new Chart(document.getElementById('sensorUmidade').getContext('2d'), {
+        var temperatura = new Chart(document.getElementById('sensorTemperatura').getContext('2d'), {
             type: 'line',
             data: {
                 datasets: [{
-                    label: 'Umidade',
+                    label: 'Temperatura',
                     borderColor: '#63B1BC',
                     backgroundColor: '#ED145B'
                 }]
@@ -44,11 +47,11 @@
             }
         });
 
-        var sensorTemperatura = new Chart(document.getElementById('sensorTemperatura').getContext('2d'), {
+        var umidade = new Chart(document.getElementById('sensorUmidade').getContext('2d'), {
             type: 'line',
             data: {
                 datasets: [{
-                    label: 'Temperatura',
+                    label: 'Umidade',
                     borderColor: '#63B1BC',
                     backgroundColor: '#0762C8'
                 }]
@@ -102,8 +105,8 @@
         }
 
         setInterval(() => {
-            obterDados(sensorUmidade, 'Umidade');
-            obterDados(sensorTemperatura, 'Temperatura');
+            obterDados(temperatura, 'Temperatura');
+            obterDados(umidade, 'Umidade');
         }, 1000);
 
     </script>
